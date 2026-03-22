@@ -7,7 +7,7 @@ st.write("Click the button to fetch your plan for today!")
 
 if st.button("Get Today's Plan"):
     try:
-        result = requests.get("YOUR_N8N_WEBHOOK_URL").json()
+        result = requests.get("https://dhvanishah31.app.n8n.cloud/webhook/todayplan").json()
 
         st.subheader("📌 Daily Summary")
         st.write(result.get("summary"))
