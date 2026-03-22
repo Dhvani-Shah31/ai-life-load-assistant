@@ -17,7 +17,7 @@ if st.button("Get Today's Plan"):
             "chores": chores
         }
 
-        result = requests.post("YOUR_N8N_WEBHOOK_URL", json=payload).json()
+        result = requests.post("https://dhvanishah31.app.n8n.cloud/webhook/todayplan", json=payload).json()
 
         st.subheader("📌 Daily Summary")
         st.write(result.get("summary"))
